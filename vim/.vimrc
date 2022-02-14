@@ -9,6 +9,12 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 
+"====== create undo dir ======"
+
+if !isderectory{"~/.vim/undo"}
+    call mkdir{"~/.vim/undo", "p"}
+endif
+
 "====== plugins ======"
 
 call plug#begin()
