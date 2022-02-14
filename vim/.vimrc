@@ -9,12 +9,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 
-"====== create undo dir ======"
-
-if !isdirectory($HOME . "/.vim/undo")
-    call mkdir($HOME . "/.vim/undo", "p", 0700)
-endif
-
 "====== plugins ======"
 
 call plug#begin()
@@ -27,6 +21,16 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'vimwiki/vimwiki'
 Plug 'chrisbra/Colorizer'
 call plug#end()
+
+
+"====== undo ======"
+
+if !isdirectory($HOME . "/.vim/undo")
+    call mkdir($HOME . "/.vim/undo", "p", 0700)
+endif
+
+set undodir=$HOME/.vim/undo/
+set undofile
 
 
 "========= general =========
@@ -46,8 +50,6 @@ set tabstop=4
 set shiftwidth=4  
 set expandtab  
 set softtabstop=4  
-set undofile
-set undodir=/home/moe/.vim/undo/
 
 "====== keybindings ======"
 
