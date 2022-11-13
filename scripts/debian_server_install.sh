@@ -44,3 +44,9 @@ ufw default allow outgoing
 ufw allow ssh
 ufw enable
 # end::install_ufw[]
+
+
+# tag::install_sudo[]
+apt-get install sudo
+usermod -aG sudo $user
+# end::install_sudo[]
