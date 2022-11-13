@@ -50,3 +50,9 @@ ufw enable
 apt-get install sudo
 usermod -aG sudo $user
 # end::install_sudo[]
+
+
+# tag::install_mulvad[]
+wget --content-disposition https://mullvad.net/download/app/deb/latest -O /home/$user/mulvad.deb
+apt install -y /home/$user/mulvad.deb
+# end::install_mulvad[]
