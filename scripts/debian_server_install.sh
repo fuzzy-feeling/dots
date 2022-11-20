@@ -31,6 +31,10 @@ sudo -u $user export GEM_PATH=~/.gem
 sudo -u $user gem install asciidoctor
 sudo -u $user gem install asciidoctor-diagram
 sudo -u $user gem install asciidoctor-pdf
+sudo -u $user export NOKOGIRI_USE_SYSTEM_LIBRARIES=1
+sudo -u $user gem install asciidoctor-epub3
+
+
 # end::install_adoc[]
 
 
