@@ -25,6 +25,7 @@ ufw enable
 
 
 # tag::install_adoc[]
+apt-get install gem -y
 sudo -u $user export GEM_HOME=~/.gem
 sudo -u $user export GEM_PATH=~/.gem
 sudo -u $user gem install asciidoctor
