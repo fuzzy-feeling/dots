@@ -43,7 +43,7 @@ systemctl enable syncthing@$user.service
 systemctl start syncthing@$user.service
 sed -i "s/<address>127.0.0.1:8384<\/address>/<address>0.0.0.0:8384<\/address>/g" /home/$user/.config/syncthing/config.xml
 systemctl restart syncthing@$user.service
-sudo ufw allow syncthing-gui
+ufw allow syncthing-gui
 # end::install_syncthing[]
 
 
